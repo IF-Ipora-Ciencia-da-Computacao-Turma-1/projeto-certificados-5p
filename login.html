@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "pt-BR">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "login.css" />
+    <title>Login certificado.com</title>
+  </head>
+
+  <body>
+    <form action="login.php" method="post">
+        <div class="container_logo">
+          <img src="imgs/avatar.png" alt="Logo" class="avatar">
+        </div>
+      
+        <div class="container_dados">
+          <label for="name"><b>Usuário</b></label>
+          <input type="text" placeholder="Digite seu usuário" name="name" required>
+      
+          <label for="pass"><b>Senha</b></label>
+          <input type="password" placeholder="Digite sua senha" name="pass" required>
+      
+          <button type="submit">Login</button>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancelar</button>
+          <span class="psw"><a href="#">Esqueceu a senha?</a></span>
+        </div>
+      </form>  
+    </body>
+</html>
