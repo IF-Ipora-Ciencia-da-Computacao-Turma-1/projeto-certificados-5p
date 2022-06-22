@@ -1,0 +1,47 @@
+/*  ##6521FF
+4F22F2 
+    403273
+    3E1BBF
+    896CF4
+    251073
+*/
+body{
+    background-color: #251073;
+}
+
+.container{
+    background-color: #3E1BBF;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+header{
+    width: 100%;
+    margin: 20px;
+    background-color: #6521FF;
+}
+header nav{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+main div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin:  20px 0px;
+    background-color: white;
+}
