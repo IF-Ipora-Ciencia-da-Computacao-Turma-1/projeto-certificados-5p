@@ -12,10 +12,21 @@
 <body>
     <h1>Gerar Certificados</h1>
     <div class="classe_textarea">
-        <textarea></textarea>
-    </div>
-    <div class="btn_gerar">
-        <button>Gear</button>
+        <form class="form-horizontal" action="gerar.php" method="post"  id="contact_form">
+            <label>
+                Nome:
+                <input  name="nome" type="text">
+            </label>
+
+            <label>
+                Email:
+                <input name="email" type="text">
+            </label>
+
+            <textarea name="texto" type="text"></textarea>
+
+            <button type="submit" href="gerar.php" class="btn_gerar">Gerar</button>
+        </form>
     </div>
 </body>
 </html>

@@ -26,19 +26,19 @@ textarea {
 }
 
 
-.btn_gerar{
+/*.btn_gerar{
   padding-top: 1rem;  
-  padding-ight: 10rem;
+  padding-right: 10rem;
   padding-left: 10rem; 
-}
+}*/
 
-.btn_gerar button{
+.btn_gerar{
   border-radius: .5rem;
-  float: rght;
+  float: right;
   font-size: 1rem;
 }
 
-.btn_gerar button:hover{
+.btn_gerar:hover{
   background-color: blue;
   color:white;
   transition: all 0.5s ease-in;
@@ -46,3 +46,8 @@ textarea {
   transition: all 0.5s;
 }
 
+label {
+  display: block;
+    margin: 10px auto;
+    float: center;
+  }
