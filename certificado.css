@@ -1,0 +1,48 @@
+h1{
+  padding-right: 1.8rem;
+  padding-left: 1.8rem;  
+  text-align: center;
+}
+
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1rem;
+
+  resize: none;
+
+  width: 100%;
+  height: 36vh;
+
+  border: 1px solid;
+  
+	border-radius: 2px;
+}
+
+.classe_textarea{
+  padding-right: 10rem;
+  padding-left: 10rem;
+}
+
+
+.btn_gerar{
+  padding-top: 1rem;  
+  padding-ight: 10rem;
+  padding-left: 10rem; 
+}
+
+.btn_gerar button{
+  border-radius: .5rem;
+  float: rght;
+  font-size: 1rem;
+}
+
+.btn_gerar button:hover{
+  background-color: blue;
+  color:white;
+  transition: all 0.5s ease-in;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
