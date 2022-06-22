@@ -7,10 +7,13 @@
 */
 body{
     background-color: #251073;
+    background-image: linear-gradient( #6521FF, #251073);
+    min-height: 100vh;
+    
 }
 
 .container{
-    background-color: #3E1BBF;
+    /*background-color: #3E1BBF;*/
     max-width: 1000px;
     margin: auto;
     display: flex;
@@ -23,15 +26,37 @@ header{
     width: 100%;
     margin: 20px;
     background-color: #6521FF;
+    border-radius: 10px;
 }
 header nav{
     display: flex;
-    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
+header nav img{
+    max-width: 150px;
+    max-height: 150px;
+    height: auto;
+    width: auto;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+}
+header nav ul li{
+    margin: 10px;
+    list-style: none;
+    
+}
+header nav ul li a{
+    text-decoration: none;
+}
+a p {
+    color: white;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -44,4 +69,6 @@ main div{
     padding: 10px;
     margin:  20px 0px;
     background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
