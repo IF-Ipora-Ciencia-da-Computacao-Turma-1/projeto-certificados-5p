@@ -16,11 +16,7 @@
         .href='certificado.html';</script>";
         die();
     }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 92f78f08f77f1fffcc439392bd8246d8ccf57bf6
     $empresa = "IF Goiano - Campus Iporá";
     $evento  = "VIII Encontro Anual de Tecnologia da Informação do Oeste Goiano – ENATI 2022";
     $data = "01 a 04 de junho de 2022";
