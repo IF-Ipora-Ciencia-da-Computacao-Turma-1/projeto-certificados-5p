@@ -10,6 +10,13 @@
     $nome = utf8_decode($_POST['nome']);
     $cpf = utf8_decode($_POST['cpf']);
 
+    if ($texto=="" or $email=="" or $nome=="" or $cpf=""){
+        echo"<script language='javascript' type='text/javascript'>
+        alert('Campos obrigatórios vazios, preencha-os para emitir certificado');window.location
+        .href='certificado.html';</script>";
+        die();
+    }
+    
     $empresa = "IF Goiano - Campus Iporá";
     $evento  = "VIII Encontro Anual de Tecnologia da Informação do Oeste Goiano – ENATI 2022";
     $data = "01 a 04 de junho de 2022";

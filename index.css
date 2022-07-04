@@ -48,6 +48,8 @@ header nav ul{
 header nav ul li{
     margin: 10px;
     list-style: none;
+    font-size: 1.5rem;
+
     
 }
 header nav ul li a{
@@ -56,12 +58,15 @@ header nav ul li a{
 #login{
     background-color: white;
     border-radius: 10px;
+    font-size: 1.5rem;
+
 }
 #login  p{
     color: #6521FF;
     font-weight: bolder;
     font-size: large;
     padding: 0px 10px;
+    font-size: 1.5rem;
 }
 a p {
     color: white;
@@ -111,6 +116,20 @@ main > div{
     flex-direction: row;
     justify-content: space-between;
 }
+
+.foto p{
+    font-size: 1.5rem;
+}
+
 .foto div{
     margin: 10px;
+}
+
+.divv{
+    background-color: rgba(0, 0, 0, 0.00);
+    color: white;
+}
+
+.divv p{
+    font-size: 1.5rem;
 }
