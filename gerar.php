@@ -9,12 +9,12 @@
     $email = $_POST['email'];
     $nome = utf8_decode($_POST['nome']);
 
-    /*$empresa = "IF Goiano - Campus Iporá";
+    $empresa = "IF Goiano - Campus Iporá";
     $evento  = "VIII Encontro Anual de Tecnologia da Informação do Oeste Goiano – ENATI 2022";
     $data = "01 a 04 de junho de 2022";
-    $carga_h = "20 horas";*/
+    $carga_h = "20 horas";
 
-    //$texto1 = utf8_decode($empresa);
+    $texto1 = utf8_decode($empresa);
     $texto2 = utf8_decode($texto);
     $texto3 = utf8_decode("Iporá-GO, ".utf8_encode(strftime( '%d de %B de %Y', strtotime( date( 'Y-m-d' ) ) )));
 
