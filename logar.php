@@ -25,6 +25,14 @@ $total = mysqli_num_rows($result_id);
         $dados = mysqli_fetch_array($result_id);
         if(!strcmp(md5($pass), $dados["password"])) {
             echo "O login fornecido está correto";
+
+            if ($dados["token"]=="") {
+                $t=token($dados);
+                $id = $dados["id"];
+                $sql_update = "UPDATE user SET token='$t' WHERE id='$id'";
+                $result = mysqli_query($connection,$sql_update);
+            }
+           
         } else {
             echo "Senha inválida!";
         exit;
@@ -39,7 +47,8 @@ $total = mysqli_num_rows($result_id);
         return str_replace(['+','/','='],['-','_',''], base64_encode($data));
     }
 
-    $key = 'secret';
+    function token($dados) {
+        $key = 'secret';
 
     $header = [
         'typ' => 'JWT',
@@ -50,9 +59,8 @@ $total = mysqli_num_rows($result_id);
     $header = base64ErlEncode($header);
 
     $payload = [
-        'username' => $name,
-        'password' => md5($pass),
-        'iss' => 'localhost'
+        'username' => $dados["username"],
+        'sub' => $dados["id"],
     ];
     $payload = json_encode($payload);
     $payload = base64ErlEncode($payload);
@@ -61,6 +69,8 @@ $total = mysqli_num_rows($result_id);
     $signature = base64ErlEncode($signature);
 
     $token = "{$header}.{$payload}.{$signature}";
+    return $token;
+    }
 
-    echo "<br>".$token;
+    
 ?>
