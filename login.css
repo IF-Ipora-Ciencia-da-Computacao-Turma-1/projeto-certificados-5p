@@ -39,15 +39,17 @@ button:hover {
 }  
 
 .container_logo {
-  width:50px; 
-  height:50px;
+  width:350px; 
+  height:350px;
   text-align: center;
   margin: 24px 0 12px 0;
 }
-  
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
+
+.avatar{
+  max-width: 150px;
+    max-height: 150px;
+    height: auto;
+    width: auto;
 }
   
 .container {
@@ -59,6 +61,8 @@ span.psw {
   float: right;
   padding-top: 16px;
 }
+
+
   
   /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
