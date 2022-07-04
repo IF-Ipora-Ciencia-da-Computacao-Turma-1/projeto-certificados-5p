@@ -8,6 +8,7 @@
     $texto = utf8_decode($_POST['texto']);
     $email = $_POST['email'];
     $nome = utf8_decode($_POST['nome']);
+    $cpf = utf8_decode($_POST['cpf']);
 
     $empresa = "IF Goiano - Campus Iporá";
     $evento  = "VIII Encontro Anual de Tecnologia da Informação do Oeste Goiano – ENATI 2022";
@@ -17,6 +18,8 @@
     $texto1 = utf8_decode($empresa);
     $texto2 = utf8_decode($texto);
     $texto3 = utf8_decode("Iporá-GO, ".utf8_encode(strftime( '%d de %B de %Y', strtotime( date( 'Y-m-d' ) ) )));
+    $data_hora = utf8_decode(utf8_encode(strftime( '%d-%m-%Y', strtotime( date( 'Y-m-d' ) ) )));
+    $hora = date('H:i');
 
     $pdf = new FPDF();
 
@@ -24,6 +27,7 @@
     $pdf->AddPage('L');
 
     $pdf->SetLineWidth(1.5);
+
 
     // desenha a imagem do certificado
     $pdf->Image('certificado.jpeg',0,0,295);
@@ -43,7 +47,7 @@
     $pdf->SetXY(32,172); //Parte chata onde tem que ficar ajustando a posição X e Y
     $pdf->MultiCell(165, 10, $texto3, '', 'L', 0); // Tamanho width e height e posição
 
-    $certificado="arquivos/$nome.pdf"; //atribui a variável $certificado com o caminho e o nome do arquivo que será salvo (vai usar o CPF digitado pelo usuário como nome de arquivo)
+    $certificado="arquivos/$cpf - $data_hora.pdf"; //atribui a variável $certificado com o caminho e o nome do arquivo que será salvo (vai usar o CPF digitado pelo usuário como nome de arquivo)
     $pdf->Output($certificado,'F'); //Salva o certificado no servidor (verifique se a pasta "arquivos" tem a permissão necessária)
     // Utilizando esse script provavelmente o certificado ficara salvo em www.seusite.com.br/gerar_certificado/arquivos/999.999.999-99.pdf (o 999 representa o CPF digitado pelo usuário)
     
