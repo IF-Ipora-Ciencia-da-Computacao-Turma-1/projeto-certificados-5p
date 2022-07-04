@@ -39,12 +39,12 @@ $total = mysqli_num_rows($result_id);
            
         } else {
             echo "Senha inválida!";
-            header("Location:login.html");
+            incorreto();
         exit;
         }
     } else {
-        header("Location:login.html");
         echo "O login fornecido por você é inexistente!";
+        incorreto();
         exit;
     }
 
@@ -78,5 +78,10 @@ $total = mysqli_num_rows($result_id);
     return $token;
     }
 
-    
+    function incorreto(){
+        echo"<script language='javascript' type='text/javascript'>
+        alert('Login e/ou senha incorretos');window.location
+        .href='login.html';</script>";
+        die();
+    }
 ?>
