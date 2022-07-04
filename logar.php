@@ -31,13 +31,19 @@ $total = mysqli_num_rows($result_id);
                 $id = $dados["id"];
                 $sql_update = "UPDATE user SET token='$t' WHERE id='$id'";
                 $result = mysqli_query($connection,$sql_update);
+                setcookie("token",$t);
+                header("Location:teste.php");
             }
+            setcookie("token",$dados["token"]);
+            header("Location:teste.php");
            
         } else {
             echo "Senha inválida!";
+            header("Location:login.html");
         exit;
         }
     } else {
+        header("Location:login.html");
         echo "O login fornecido por você é inexistente!";
         exit;
     }
